@@ -6,36 +6,10 @@
 # @Software: PyCharm
 
 import requests
-from requests.exceptions import ConnectionError
 from lxml import etree
 
-from fake_useragent import UserAgent
-
-base_headers = {
-    'User-Agent': UserAgent().random,
-    'Accept-Encoding': 'gzip, deflate, sdch',
-    'Accept-Language': 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7'
-}
-
-
-def get_text(url, options={}):
-    """
-    抓取代理
-    :param url: 请求的目标url
-    :param options:
-    :return:
-    """
-    headers = dict(base_headers, **options)
-    print('正在抓取', url)
-    try:
-        response = requests.get(url, headers=headers)
-        print(response.status_code)
-        if response.status_code == 200:
-            print('抓取成功', url, response.status_code)
-            return response.text
-    except ConnectionError:
-        print('抓取失败', url)
-        return None
+from ProxyIPPool import settings
+from utils.helper import get_text
 
 
 def crawl_89ip(page_count=10):
@@ -178,7 +152,7 @@ def verify_ip(proxy_ip, proxy_port):
         try:
             print('*****************')
             print('测试%s' % test_url)
-            r = requests.get(url=test_url, headers=base_headers, proxies=proxies, timeout=3)
+            r = requests.get(url=test_url, headers=settings.BASE_HEADERS, proxies=proxies, timeout=3)
             print(r.status_code)
             print(r.headers)
         except:
