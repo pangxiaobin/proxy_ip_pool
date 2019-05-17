@@ -16,6 +16,11 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-urlpatterns = [
+from IPPool import views
+
+urlpatterns = {
     url(r'^admin/', admin.site.urls),
-]
+    url(r'^$', views.index),
+    url(r'^api/fetch/$', views.fetch, name='fetch'),
+    url(r'^api/random/(?P<num>[0-9]+)/$', views.random, name='random')
+}

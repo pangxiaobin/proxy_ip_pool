@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'IPPool',
 ]
 
 MIDDLEWARE = [
@@ -73,10 +74,21 @@ WSGI_APPLICATION = 'ProxyIPPool.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'ippool',
+        'USER': 'root',
+        'PASSWORD': 'hubery1204',
+        'HOST': 'localhost',
+        'PORT': 3306,
     }
 }
 
@@ -170,3 +182,6 @@ BASE_HEADERS = {
 # 检验代理url
 HTTP_TEST_URL = "http://httpbin.org/get"
 HTTPS_TEST_URL = "https://httpbin.org/get"
+
+
+
