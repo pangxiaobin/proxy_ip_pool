@@ -10,8 +10,8 @@ def index(requests):
     :param requests:
     :return:
     """
-    context = '<h3>1.访问接口http://localhost/api/fetch/ 随机返回一个代理ip信息</h3> <br/>' \
-              '<h3>2.访问接口http://localhost/api/random/{个数}, 随机返回指定个数</h3> <br/>'
+    context = '<h3>1.访问接口http://{运行服务器的ip}/api/fetch/ 随机返回一个代理ip信息</h3> <br/>' \
+              '<h3>2.访问接口http://{运行服务器的ip}/api/random/{个数}, 随机返回指定个数</h3> <br/>'
     return HttpResponse(context)
 
 

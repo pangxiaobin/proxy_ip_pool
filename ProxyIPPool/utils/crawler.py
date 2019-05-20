@@ -36,7 +36,6 @@ def crawl_89ip(page_count=2):
     urls = [start_url.format(page) for page in range(1, page_count + 1)]
     p89_ip_list = []
     for url in urls:
-        print("Crawling", url)
         headers = {
             "Referer": url,
             "Host": "www.89ip.cn",
@@ -64,7 +63,6 @@ def crawl_qy_dai_li(page_count=2):
     urls = [start_url.format(page) for page in range(1, page_count + 1)]
     qy_ip_list = []
     for url in urls:
-        print("Crawling", url)
         headers = {
             "Host": "www.qydaili.com",
             "Upgrade-Insecure-Requests": "1",
@@ -95,7 +93,6 @@ def crawl_3366_dai_li(page_count=5, stype='1'):
     urls = [start_url.format(page) for page in range(1, page_count + 1)]
     ip_3366_list = []
     for url in urls:
-        print("Crawling", url)
         headers = {
             "Host": "www.ip3366.net",
             "Upgrade-Insecure-Requests": "1",
@@ -158,9 +155,13 @@ def craw_rmccurdy():
     return rmccurdy_ip_list
 
 
-def run():
-    craw_ip_list = [crawl_89ip, crawl_qy_dai_li]
-    # craw_ip_list = [crawl_89ip, crawl_qy_dai_li, crawl_3366_dai_li, crawl_highanon, craw_rmccurdy]
+def run_clawer():
+    """
+    爬取代理ｉｐ
+    :return:
+    """
+    # craw_ip_list 为爬取各个免费代理ｉｐ的上面写的函数，当需要增加时，需要在这里面添加
+    craw_ip_list = [crawl_89ip, crawl_qy_dai_li, crawl_3366_dai_li, crawl_highanon, craw_rmccurdy]
 
     with ThreadPoolExecutor(max_workers=4) as pool1:
         for future in craw_ip_list:
@@ -222,5 +223,5 @@ def update_ip():
 
 
 if __name__ == '__main__':
-    run()
+    run_clawer()
     update_ip()
