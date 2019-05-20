@@ -12,6 +12,7 @@
 """
 import logging
 
+from ProxyIPPool.settings import CRAWLER_TIME, UPDATE_TIME
 from utils.crawler import run_clawer, update_ip
 from apscheduler.schedulers.blocking import BlockingScheduler
 
@@ -22,8 +23,8 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s %(filename)s[line:%(
 def run():
     print('开启定时任务')
     scheduler = BlockingScheduler()
-    scheduler.add_job(func=run_clawer, trigger='interval', minutes=20)  # 每20分钟抓取一次
-    scheduler.add_job(func=update_ip, trigger='interval', hours=4)  # 每隔４小时执行一次更新ｉｐ
+    scheduler.add_job(func=run_clawer, trigger='interval', minutes=CRAWLER_TIME)  # 每20分钟抓取一次
+    scheduler.add_job(func=update_ip, trigger='interval', hours=UPDATE_TIME)  # 每隔４小时执行一次更新ｉｐ
     scheduler._logger = logging
     scheduler.start()
 

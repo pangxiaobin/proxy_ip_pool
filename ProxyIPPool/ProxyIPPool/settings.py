@@ -184,4 +184,9 @@ HTTP_TEST_URL = "http://httpbin.org/get"
 HTTPS_TEST_URL = "https://httpbin.org/get"
 
 
+# 定时爬去和更新的时间
+CRAWLER_TIME = 20  # 分钟
+UPDATE_TIME = 2  # 小时
+
+
 
