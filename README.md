@@ -51,7 +51,7 @@ chdir=/path/to/proxy_ip_pool/ProxyIPPool/
 # 配置项目的wsgi目录。相对于工程目录
 wsgi-file=ProxyIPPool/wsgi.py
 ```
-# 生成迁移文件和执行迁移文件
+### 生成迁移文件和执行迁移文件
 ```shell
 python manage.py makemigrations
 python manage.py migrate
