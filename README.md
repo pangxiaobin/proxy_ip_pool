@@ -98,3 +98,20 @@ python manage.py migrate
   - ### http://{运行服务器的ip}/api/fetch/ 随机返回一个代理ip信息
 
   - ### http://{运行服务器的ip}/api/random/{个数}, 随机返回指定个数
+- 首页展示的内容可以在这里IPPool/views.py中修改
+```python
+# IPPool/views.py
+
+# 修改context 改变返回首页的内容
+
+
+def index(requests):
+    """
+    返回到说明页
+    :param requests:
+    :return:
+    """
+    context = '<h3>1.访问接口http://{运行服务器的ip}/api/fetch/ 随机返回一个代理ip信息</h3> <br/>' \
+              '<h3>2.访问接口http://{运行服务器的ip}/api/random/{个数}, 随机返回指定个数</h3> <br/>'
+    return HttpResponse(context)
+```
