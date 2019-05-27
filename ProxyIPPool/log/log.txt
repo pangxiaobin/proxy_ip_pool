@@ -1,16 +1,1 @@
-2019-05-20 17:21:40 base.py[line:440] INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2019-05-20 17:21:40 base.py[line:881] INFO Added job "test" to job store "default"
-2019-05-20 17:21:40 base.py[line:166] INFO Scheduler started
-2019-05-20 17:22:13 base.py[line:440] INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2019-05-20 17:22:13 base.py[line:881] INFO Added job "test" to job store "default"
-2019-05-20 17:22:13 base.py[line:166] INFO Scheduler started
-2019-05-20 17:22:23 base.py[line:123] INFO Running job "test (trigger: interval[0:00:10], next run at: 2019-05-20 17:22:23 CST)" (scheduled at 2019-05-20 17:22:23.061637+08:00)
-2019-05-20 17:22:23 base.py[line:144] INFO Job "test (trigger: interval[0:00:10], next run at: 2019-05-20 17:22:23 CST)" executed successfully
-2019-05-20 17:22:33 base.py[line:123] INFO Running job "test (trigger: interval[0:00:10], next run at: 2019-05-20 17:22:33 CST)" (scheduled at 2019-05-20 17:22:33.061637+08:00)
-2019-05-20 17:22:33 base.py[line:144] INFO Job "test (trigger: interval[0:00:10], next run at: 2019-05-20 17:22:33 CST)" executed successfully
-2019-05-20 17:35:20 base.py[line:440] INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2019-05-20 17:37:30 base.py[line:440] INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2019-05-20 17:37:30 base.py[line:440] INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2019-05-20 17:37:30 base.py[line:881] INFO Added job "run_clawer" to job store "default"
-2019-05-20 17:37:30 base.py[line:881] INFO Added job "update_ip" to job store "default"
-2019-05-20 17:37:30 base.py[line:166] INFO Scheduler started
+
