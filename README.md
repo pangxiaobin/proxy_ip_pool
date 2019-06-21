@@ -22,7 +22,7 @@ git clone https://github.com/pangxiaobin/proxy_ip_pool.git
 ```shell
 pip install -i https://pypi.douban.com/simple/ -r requments.txt
 ```
--创建数据库
+- 创建数据库
 ```shell
 mysql -uroot -p
 create database ippool charset=utf8;
