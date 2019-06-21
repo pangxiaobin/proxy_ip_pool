@@ -26,6 +26,7 @@ pip install -i https://pypi.douban.com/simple/ -r requments.txt
 ```shell
 mysql -uroot -p
 create database ippool charset=utf8;
+```
 
 - 配置项目
 
