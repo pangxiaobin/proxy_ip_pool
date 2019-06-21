@@ -88,7 +88,7 @@ python manage.py migrate
   # 调试时运行
   python run.py
   # 在服务器中可以运行　
-  nohup python -u python run.py >> crawler.out 2>&1 & 
+  nohup python -u run.py >> crawler.out 2>&1 & 
   ```
 
 注意在项目下创建存储日志的文件
